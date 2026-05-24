@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-pai-navy: #144255;
+  --color-pai-navy-dark: #0e2f3d;
+  --color-pai-navy-light: #1e6b8a;
+  --color-pai-sky: #2a8ab5;
+  --color-pai-gold: #e8a000;
+  --color-pai-red: #c62828;
+  --color-pai-red-dark: #8e0000;
+  --color-surface: #f4f7fa;
+  --color-surface-card: #ffffff;
+
+  --font-roboto: var(--font-roboto);
+  --font-roboto-slab: var(--font-roboto-slab);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* Prevent dark mode from overriding brand colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* Global focus-visible ring */
+:focus-visible {
+  outline: 2px solid var(--color-pai-navy);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Screen-reader utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: revert;
+  margin: revert;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }

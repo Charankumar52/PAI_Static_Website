@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e6b8a"/>
+      <stop offset="100%" stop-color="#0e2f3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#sky)"/>
+  <text x="540" y="480" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">Reserve Packing</text>
+  <text x="540" y="550" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">Workshop</text>
+  <text x="540" y="620" font-family="Georgia, serif" font-size="32" fill="rgba(255,255,255,0.8)" text-anchor="middle">October 2025</text>
+</svg>
