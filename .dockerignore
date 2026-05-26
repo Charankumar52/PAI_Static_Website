@@ -1,0 +1,11 @@
+.git
+.gitignore
+.next
+node_modules
+README.md
+Dockerfile
+.dockerignore
+.env*
+.vercel
+*.zip
+docs/
