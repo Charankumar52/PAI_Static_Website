@@ -15,9 +15,9 @@ export default function Footer() {
             <Image
               src="/images/PAI_Logo.png"
               alt="PAI"
-              width={200}
-              height={82}
-              className="h-16 w-auto brightness-0 invert"
+              width={180}
+              height={74}
+              className="h-20 w-auto self-start brightness-0 invert"
             />
             <h3 className="font-roboto-slab font-semibold text-lg leading-snug">
               Paragliding Association Of India

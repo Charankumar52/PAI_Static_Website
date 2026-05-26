@@ -1,9 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import { Users, Shield, IdCard, CheckCircle } from "lucide-react";
 import { insuranceTiers, insuranceFeatures } from "@/data/membership";
 import FadeUp from "@/components/ui/FadeUp";
+import InsuranceBookingModal from "@/components/ui/InsuranceBookingModal";
 
 export default function Membership() {
+  const [insuranceModalOpen, setInsuranceModalOpen] = useState(false);
   return (
+    <>
     <section id="membership" className="bg-surface py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="text-center mb-12">
@@ -80,6 +86,15 @@ export default function Membership() {
                   </div>
                 </div>
               </div>
+
+              <a
+                href="https://portal.paraglidingassociationofindia.org/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
+              >
+                Sign Up / Renew
+              </a>
             </div>
           </FadeUp>
 
@@ -140,6 +155,28 @@ export default function Membership() {
                   Premiums include GST
                 </p>
               </div>
+
+              <div className="rounded-lg bg-amber-50 border border-amber-100 px-2.5 py-2 text-xs text-gray-600 leading-snug space-y-1.5">
+                <p>
+                  <span className="font-semibold text-amber-700">Note: </span>
+                  Once you receive the insurance copy, please email it to{" "}
+                  <a href="mailto:support@pgaoi.org" className="text-pai-sky underline underline-offset-2 hover:text-pai-navy transition-colors">
+                    support@pgaoi.org
+                  </a>{" "}
+                  so it can be updated on the verifiable website.
+                </p>
+                <p>
+                  <span className="font-semibold text-amber-700">Disclaimer: </span>
+                  PAI is associated with CARE Group Insurance to provide members with the best possible pricing and benefits. CARE independently manages all policy bookings and claim processes. PAI does not earn or make any money from this arrangement.
+                </p>
+              </div>
+
+              <button
+                onClick={() => setInsuranceModalOpen(true)}
+                className="mt-auto w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
+              >
+                Book Now
+              </button>
             </div>
           </FadeUp>
 
@@ -155,40 +192,91 @@ export default function Membership() {
                 </h3>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                PAI&apos;s Pilot Rating System helps pilots progress through
-                structured levels of competency, ensuring safe and responsible
-                flying. Ratings are issued through accredited schools and
-                instructors based on skill, logged hours, and demonstrated safety
-                practices. This system maintains uniform standards for pilots
-                across India.
+                PAI&apos;s nationally recognised rating system covers both
+                Paragliding (PG) and Powered Paragliding (PPG) disciplines,
+                from introductory levels through to examiner qualifications.
               </p>
 
-              <div className="mt-auto grid grid-cols-1 gap-3">
-                {["Student Pilot", "Novice", "Intermediate", "Advanced", "Master"].map(
-                  (level, i) => (
+              {/* PG Ratings */}
+              <div>
+                <div className="flex items-center gap-2 mb-2.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-pai-navy bg-pai-navy/10 rounded-full px-2.5 py-0.5">
+                    Paragliding — PG
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-1.5">
+                  {[
+                    { code: "P1",  name: "Introduction" },
+                    { code: "P2",  name: "Student Pilot" },
+                    { code: "P3",  name: "Novice Pilot" },
+                    { code: "P4",  name: "Intermediate Pilot" },
+                    { code: "P5",  name: "Advanced Pilot" },
+                    { code: "P7",  name: "Tandem Pilot" },
+                    { code: "P8",  name: "Asst. Instructor" },
+                    { code: "P9",  name: "Instructor" },
+                    { code: "P10", name: "Examiner" },
+                  ].map(({ code, name }) => (
                     <div
-                      key={level}
-                      className="flex items-center gap-3 p-3 rounded-lg bg-surface border border-gray-100"
+                      key={code}
+                      className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-surface border border-gray-100"
                     >
-                      <div
-                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                        style={{
-                          background: `hsl(${200 + i * 10}, 50%, ${40 + i * 5}%)`,
-                        }}
-                      >
-                        {i + 1}
-                      </div>
-                      <span className="text-sm font-medium text-gray-700">
-                        {level}
+                      <span className="text-[10px] font-extrabold text-white bg-pai-navy rounded px-1.5 py-0.5 flex-shrink-0 leading-none">
+                        {code}
                       </span>
+                      <span className="text-xs text-gray-700 truncate">{name}</span>
                     </div>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
+
+              {/* PPG Ratings */}
+              <div>
+                <div className="flex items-center gap-2 mb-2.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-teal-700 bg-teal-50 rounded-full px-2.5 py-0.5">
+                    Powered Paragliding — PPG
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-1.5">
+                  {[
+                    { code: "PPG1", name: "Novice" },
+                    { code: "PPG2", name: "Intermediate" },
+                    { code: "PPG3", name: "Advanced" },
+                    { code: "PPG4", name: "Sports Tandem" },
+                    { code: "PPG5", name: "Tandem" },
+                    { code: "PPG6", name: "Instructor" },
+                    { code: "PPG7", name: "Examiner" },
+                  ].map(({ code, name }) => (
+                    <div
+                      key={code}
+                      className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-teal-50/50 border border-teal-100"
+                    >
+                      <span className="text-[10px] font-extrabold text-white bg-teal-600 rounded px-1.5 py-0.5 flex-shrink-0 leading-none">
+                        {code}
+                      </span>
+                      <span className="text-xs text-gray-700 truncate">{name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <a
+                href="https://portal.paraglidingassociationofindia.org/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
+              >
+                Apply for Rating
+              </a>
             </div>
           </FadeUp>
         </div>
       </div>
     </section>
+
+    <InsuranceBookingModal
+      isOpen={insuranceModalOpen}
+      onClose={() => setInsuranceModalOpen(false)}
+    />
+    </>
   );
 }

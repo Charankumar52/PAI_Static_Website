@@ -11,8 +11,8 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { label: "Members", value: 1800, suffix: "+" },
-  { label: "Schools", value: 23 },
+  { label: "Members", value: 1900, suffix: "+" },
+  { label: "Schools", value: 11 },
   { label: "State Associations", value: 13 },
 ];
 
@@ -68,13 +68,13 @@ export default function Stats() {
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/gallery/Gemini_Generated_Image_1.png"
+          src="/images/gallery/PAI_Homepage.jpg"
           alt=""
           fill
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-pai-navy/80" />
+        <div className="absolute inset-0 bg-pai-navy/55" />
       </div>
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

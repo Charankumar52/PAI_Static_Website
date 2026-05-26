@@ -50,7 +50,6 @@ function TypewriterTagline({ reduced }: { reduced: boolean }) {
         setDisplayed(TAGLINE.slice(0, i));
         if (i >= TAGLINE.length) {
           clearInterval(typingInterval);
-          // Hold for ~7s then repeat — total cycle ≈ 10s
           cycleTimeout = setTimeout(runCycle, 7000);
         }
       }, 90);
@@ -85,11 +84,11 @@ function TypewriterTagline({ reduced }: { reduced: boolean }) {
     <motion.p
       ref={pRef}
       variants={reduced ? itemReduced : item}
-      className="text-xl sm:text-2xl md:text-3xl font-light italic text-white/90 mb-10 tracking-wide min-h-[2rem]"
+      className="text-base sm:text-xl md:text-2xl lg:text-3xl font-light italic text-white/90 mb-8 sm:mb-10 tracking-wide min-h-[1.5rem]"
     >
       {displayed}
       {cursorOn && (
-        <span className="inline-block w-0.5 h-6 bg-white/70 ml-0.5 align-middle animate-pulse" />
+        <span className="inline-block w-0.5 h-5 sm:h-6 bg-white/70 ml-0.5 align-middle animate-pulse" />
       )}
     </motion.p>
   );
@@ -100,50 +99,43 @@ export default function Hero() {
   const child = reduced ? itemReduced : item;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/gallery/Gemini_Generated_Image_2.png"
+          src="/images/gallery/PAI_Homepage.jpg"
           alt=""
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Gradient overlay — dark enough for text readability */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(160deg, rgba(14,47,61,0.88) 0%, rgba(20,66,85,0.78) 40%, rgba(30,107,138,0.65) 75%, rgba(42,138,181,0.50) 100%)",
-          }}
-        />
       </div>
+
+      {/* Subtle veil — keeps background visible but improves text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
       {/* Content */}
       <motion.div
-        className="relative z-10 text-center text-white px-4 sm:px-6 max-w-4xl mx-auto pt-20"
+        className="relative z-10 text-center text-white px-5 sm:px-6 max-w-4xl mx-auto pt-20 pb-16"
         variants={container}
         initial="hidden"
         animate="visible"
       >
+        {/* Badge */}
         <motion.div
           variants={child}
-          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase text-white/80 mb-8"
+          className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-white mb-6 sm:mb-8"
         >
           Est. 2010 &nbsp;·&nbsp; Registered in Goa
         </motion.div>
 
+        {/* Title — wraps naturally on mobile, single line on sm+ */}
         <motion.h1
           variants={child}
-          className="font-roboto-slab text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 drop-shadow-lg"
+          className="font-roboto-slab text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:whitespace-nowrap [text-shadow:0_2px_16px_rgba(0,0,0,0.9),0_1px_4px_rgba(0,0,0,0.7)]"
         >
-          Paragliding Association
-          <br />
-          <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal">
-            Of India
-          </span>
+          Paragliding Association Of India
         </motion.h1>
 
         <TypewriterTagline reduced={reduced} />
@@ -154,13 +146,13 @@ export default function Hero() {
         >
           <a
             href="#membership"
-            className="inline-block px-8 py-3.5 bg-white text-pai-navy font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg text-sm sm:text-base"
+            className="inline-block px-7 py-3.5 bg-white text-pai-navy font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg text-sm sm:text-base"
           >
             Become a Member
           </a>
           <a
-            href="#updates"
-            className="inline-block px-8 py-3.5 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors text-sm sm:text-base"
+            href="#social"
+            className="inline-block px-7 py-3.5 bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold rounded-lg hover:bg-white/25 transition-colors text-sm sm:text-base"
           >
             Latest Updates
           </a>
@@ -168,7 +160,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/50 animate-bounce">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/60 animate-bounce">
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>

@@ -46,6 +46,11 @@ export const metadata: Metadata = {
     description: "National Sports Association of Paragliding in India.",
     site: "@pgaoi",
   },
+  icons: {
+    icon: "/images/logo fav.png",
+    shortcut: "/images/logo fav.png",
+    apple: "/images/logo fav.png",
+  },
   robots: {
     index: true,
     follow: true,
