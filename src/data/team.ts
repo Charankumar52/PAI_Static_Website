@@ -16,7 +16,7 @@ export const managingCommittee: Member[] = [
   {
     name: "Rudrajit Lukhurakhan",
     role: "Secretary General",
-    photo: "/images/gallery/Rudrajit Lukhurakhan, Secretary General.png",
+    photo: "/images/gallery/Rudrajit_Lukhurakhan_Secretary_General.png",
     summary:
       "Rudrajit Lukhurakhan has contributed significantly to the growth of the paragliding community through leadership, safety advocacy, pilot coordination and development initiatives under the Paragliding Association of India (PAI). He has voluntarily served as an assistant instructor to help train pilots in Assam, promoting and expanding the sport in the region. He is a FAI certified accuracy judge and has also contributed as a judge in paragliding accuracy competitions in India and Nepal, supporting fair competition standards and technical excellence.",
   },
@@ -71,7 +71,7 @@ export const mcMembers: Member[] = [
   },
   {
     name: "Puneet Behl",
-    photo: "/images/gallery/Puneet Behl, MC Member.png",
+    photo: "/images/gallery/Puneet_Behl_MC_Member.png",
     summary:
       "Puneet Behl is a prominent paragliding pilot, technologist, and digital administrator from Bengaluru, Karnataka. He is widely recognized within the Indian aerosports community for combining his extensive software engineering expertise with a deep passion for aviation. His voluntary contribution toward the development and management of the current PAI website has been highly appreciated by the paragliding community.",
   },
@@ -105,7 +105,7 @@ export const technicalCommittee: Member[] = [
   },
   {
     name: "Tanaji Takve",
-    photo: "/images/gallery/Tanaji Takve, TC Member.jpg.jpeg",
+    photo: "/images/gallery/Tanaji_Takve_TC_Member.jpeg",
     summary:
       "Tanaji Takve (widely known as \"TJ\") is a pioneer of Indian paragliding based in Kamshet, Maharashtra. With nearly three decades of experience, he is an accomplished Acro and SIV specialist, an internationally certified instructor, and the founder of the Paragliding Mantra school.",
   },
@@ -150,7 +150,7 @@ export const honoraryAdvisors: Member[] = [
   },
   {
     name: "Khusroo Pithawala",
-    photo: "/images/gallery/Khushroo Pithawala, Hon Advisor.jpeg",
+    photo: "/images/gallery/Khushroo_Pithawala_Hon_Advisor.jpeg",
     summary:
       "He is a highly respected veteran paragliding instructor and a pioneering figure in the Indian free-flying community. Alongside his daughter, Naasha Pithawalla, he co-founded Paragliding Bawas, a premium aviation training academy operating out of Alibaug, Maharashtra. With decades of airtime, he specialises in transforming complete beginners into confident, self-reliant solo pilots.",
   },
