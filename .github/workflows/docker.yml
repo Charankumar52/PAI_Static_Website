@@ -28,7 +28,7 @@ jobs:
           context: .
           push: true
           tags: |
-            puneet739/pai-website:latest
-            puneet739/pai-website:${{ github.sha }}
+            charankumar52/pai-website:latest
+            charankumar52/pai-website:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
