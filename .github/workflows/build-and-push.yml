@@ -24,4 +24,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: charankumar52/pai-website:latest
+          tags: |
+            charankumar52/pai-website:latest
+            charankumar52/pai-website:${{ github.sha }}
