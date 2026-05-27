@@ -20,7 +20,7 @@ const pillars = [
   {
     icon: Globe2,
     title: "FAI Recognition",
-    desc: "Recognised by the International Federation (FAI) through the Aero Club of India — India's National Aerosports Control body. PAI is an associate member of ACI.",
+    desc: "PAI and its affiliated state associations have been involved in organising internationally recognised paragliding competitions in India under the FAI/CIVL framework, including both Cross Country (XC) and Accuracy disciplines. These events have included FAI Category 2 sanctioned competitions and events functioning as World Cup level qualifiers with WPRS ranking validity.",
   },
 ];
 
