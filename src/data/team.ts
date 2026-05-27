@@ -44,8 +44,9 @@ export const managingCommittee: Member[] = [
   {
     name: "Samson Sundar",
     role: "VP South",
+    photo: "/images/gallery/samson_sundar.jpeg",
     summary:
-      "Samson Sunder is a passionate paragliding pilot from Coimbatore, known for his dedication to free flying and the growing paragliding community in South India. With a strong interest in adventure sports and aviation, he has been actively involved in promoting safe and responsible flying practices among new and experienced pilots alike.",
+      "A passionate paragliding enthusiast with 18+ years of flying experience and extensive expertise in training, administration, event management, and community development alongside the Indian Army, various state governments, and leading paragliding schools across India. Served as Scorer for the Inter Services X-Country Championship 2022 and Technical Director for the Tehri Acro Festival 2023. Committed to pilot safety, grassroots development, and the structured growth of the sport.",
   },
   {
     name: "Norbu Lama",
