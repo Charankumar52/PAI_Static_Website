@@ -1,3 +1,4 @@
+# Builds and pushes two Docker images on every push to main: one tagged 'main' and one with the commit SHA for rollback
 name: Docker Build and Push
 
 on:
