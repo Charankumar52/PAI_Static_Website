@@ -67,6 +67,7 @@ export default function RootLayout({
       className={`${roboto.variable} ${robotoSlab.variable}`}
     >
       <body className="min-h-screen flex flex-col antialiased">
+        <div id="fb-root" />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-4 focus:py-2 focus:bg-pai-navy focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg"

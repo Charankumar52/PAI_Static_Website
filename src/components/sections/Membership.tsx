@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Users, Shield, IdCard, CheckCircle } from "lucide-react";
+import { Users, Shield, IdCard, CheckCircle, Download } from "lucide-react";
 import { insuranceTiers, insuranceFeatures } from "@/data/membership";
 import FadeUp from "@/components/ui/FadeUp";
 import InsuranceBookingModal from "@/components/ui/InsuranceBookingModal";
@@ -171,12 +171,30 @@ export default function Membership() {
                 </p>
               </div>
 
-              <button
-                onClick={() => setInsuranceModalOpen(true)}
-                className="mt-auto w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
-              >
-                Book Now
-              </button>
+              <div className="mt-auto flex flex-col gap-2">
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1psXntdA2wk83ylE8FwJOgpOOqx-pS5ew"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center text-sm font-semibold text-pai-navy border border-pai-navy rounded-lg py-2.5 transition-colors hover:bg-pai-navy/5 flex items-center justify-center gap-2"
+                >
+                  <Download className="w-4 h-4" /> Download Claim Form
+                </a>
+                {/* <button
+                  onClick={() => setInsuranceModalOpen(true)}
+                  className="w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
+                >
+                  Book Now
+                </button> */}
+                <a
+                  href="https://portal.paraglidingassociationofindia.org/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
+                >
+                  Book Now
+                </a>
+              </div>
             </div>
           </FadeUp>
 

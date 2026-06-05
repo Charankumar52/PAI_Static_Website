@@ -15,9 +15,9 @@ export const downloads: Download[] = [
     file: drive("179iJ4jZC7Bqpp7zoGlYsXggBtvol6KNg"),
   },
   {
-    title: "CARE Insurance Claim Form",
-    description: "Insurance claim form for PAI members covered under the CARE insurance policy.",
-    file: drive("1psXntdA2wk83ylE8FwJOgpOOqx-pS5ew"),
+    title: "PAI Tandem Pilot Handbook",
+    description: "Official handbook for PAI Tandem Pilots covering workshop course material and guidelines.",
+    file: drive("19V4tng7UT_9H_1bt0s6N47XNm5op5Mrh"),
   },
   {
     title: "PAI Technical Manual 2020 — v2",
