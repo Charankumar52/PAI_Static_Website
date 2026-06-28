@@ -180,20 +180,12 @@ export default function Membership() {
                 >
                   <Download className="w-4 h-4" /> Download Claim Form
                 </a>
-                {/* <button
+                <button
                   onClick={() => setInsuranceModalOpen(true)}
                   className="w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
                 >
                   Book Now
-                </button> */}
-                <a
-                  href="https://portal.paraglidingassociationofindia.org/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
-                >
-                  Book Now
-                </a>
+                </button>
               </div>
             </div>
           </FadeUp>

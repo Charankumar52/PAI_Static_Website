@@ -51,9 +51,9 @@ export const managingCommittee: Member[] = [
   {
     name: "Norbu Lama",
     role: "VP East",
-    photo: "/images/gallery/Norbu Lama VP-East.png",
+    photo: "/images/gallery/Norbu_Lama_VP_EAST.jpeg",
     summary:
-      "Norbu Lama is a dedicated paragliding pilot from the Eastern Himalayas, known for his active role in developing free flying in Sikkim and the Darjeeling region. He has built over a decade of experience in competitive flying, tandem operations, and paragliding judging.",
+      "Norbu Lama is a dedicated paragliding pilot from the Eastern Himalayas with over a decade of experience in competitive flying and paragliding events. A certified FAI Paragliding Judge, he has served in key officiating roles at national and international accuracy championships across India, Nepal, and Kazakhstan.His experience includes major competitions in Sikkim, Meghalaya, Assam, Mizoram, Nepal, and the Cup of Pedro Tirado in Kazakhstan. He has further enhanced his expertise through advanced training programs, including the Mastering Paragliding Accuracy & Target Judging Seminar in Kazakhstan and the PGA Judges Training Program in Sikkim.",
   },
 ];
 
@@ -96,7 +96,7 @@ export const technicalCommittee: Member[] = [
     name: "Samson D'Silva",
     photo: "/images/gallery/Samson DSilva TC Member.jpeg",
     summary:
-      "Samson Lawrence Dsilva is a seasoned air sports professional with over 30 years of experience in paragliding and paramotoring, and the Founder & Chief Flying Instructor of Space Apple, based in Vasai, near Mumbai. He served as Chairman of the Technical Committee of the Paragliding Association of India (2020–2025) and as Secretary General (2021–2022). At the international level, he played a pivotal role as International Technical Officer – Paragliding at the Asian Games 2018 in Indonesia, appointed by the Air Sports Federation of Asia. He currently holds the position of Assistant Commissioner (Safety & Standards) under the Microlight & Paramotoring Commission of India (MPCI) as per the National Air Sports Policy (NASG 2023).",
+      "Samson Lawrence Dsilva is a seasoned air sports professional with over 30 years of experience in paragliding and paramotoring and is the Founder & Chief Flying Instructor of Space Apple, based in Vasai, near Mumbai. He was appointed by the Aero Club of India (ACI) as a Technical Committee Member for several international paragliding competitions held at Bir Billing, Himachal Pradesh, in 2005, 2006, 2010, 2011, and 2012. In 2021, he was also appointed as a Technical Committee Member for Paramotoring by the Kerala Adventure Tourism Promotion Society (KATPS).Samson served as Chairman of the Technical Committee of the Paragliding Association of India from 2020 to 2025 and as its Secretary General from 2021 to 2022. At the international level, he played a pivotal role as International Technical Officer – Paragliding at the 2018 Asian Games in Indonesia, having been appointed by the Air Sports Federation of Asia. He also served as Assistant Commissioner (Safety & Standards) under the Microlight & Paramotoring Commission of India (MPCI) from January 2025 to June 2026. Throughout his career, Samson has played an active role in advancing air sports governance, pilot training standards, safety systems, and competition regulations in India. He has contributed to developing technical procedures, instructor training programs, and operational standards that promote safety, professionalism, and best practices. Through Space Apple, he has trained numerous pilots and continues to promote safe, accessible, and professionally managed air sports activities while supporting the growth and recognition of air sports in India and internationally.",
   },
   {
     name: "Yagya Gore Bhul (Yogi)",
