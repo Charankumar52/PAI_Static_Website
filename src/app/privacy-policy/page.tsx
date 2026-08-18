@@ -232,10 +232,10 @@ export default function PrivacyPolicyPage() {
               If you wish to contact PAI for any privacy-related query, please reach us via our
               official email address{" "}
               <a
-                href="mailto:info@pgaoi.org"
+                href="mailto:base@pgaoi.org"
                 className="text-pai-sky hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pai-sky rounded"
               >
-                info@pgaoi.org
+                base@pgaoi.org
               </a>
               .
             </p>

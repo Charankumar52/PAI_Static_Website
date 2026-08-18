@@ -217,10 +217,10 @@ export default function TermsOfUsePage() {
             <p>
               For questions regarding these Terms, please contact PAI via the official email address{" "}
               <a
-                href="mailto:info@pgaoi.org"
+                href="mailto:base@pgaoi.org"
                 className="text-pai-sky hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pai-sky rounded"
               >
-                info@pgaoi.org
+                base@pgaoi.org
               </a>
               .
             </p>

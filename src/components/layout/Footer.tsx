@@ -68,7 +68,7 @@ export default function Footer() {
             </h4>
             <div className="flex gap-3">
               <a
-                href="mailto:info@pgaoi.org"
+                href="mailto:base@pgaoi.org"
                 aria-label="Email PAI"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
               >
