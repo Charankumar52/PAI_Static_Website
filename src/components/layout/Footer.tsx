@@ -86,7 +86,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/pai_paragliding/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="PAI on Instagram"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
               >
