@@ -4,8 +4,16 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X, Shield, Loader2 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import CryptoJS from "crypto-js";
 
+const AES_KEY = CryptoJS.enc.Utf8.parse("z5yK1lw7XYt6YKdP7Pne2Jw3zRkMAziH");
+const AES_IV  = CryptoJS.enc.Utf8.parse("i0kbCAlFTlDXshYV");
 const PORTAL_TOKEN = "R1hna3hrSTFabVlRTnFqbEtpV0p6dz09Ojoh1aq0wOIgrqsvmk6D1SJA";
+
+function encrypt(value: string): string {
+  const encrypted = CryptoJS.AES.encrypt(value, AES_KEY, { iv: AES_IV }).toString();
+  return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(encrypted));
+}
 
 function Portal({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
@@ -49,7 +57,7 @@ export default function InsuranceBookingModal({ isOpen, onClose }: Props) {
     e.preventDefault();
     if (!validate()) return;
     setLoading(true);
-    const url = `https://partners.careinsurance.com/portals/asego/index.php?token=${PORTAL_TOKEN}&tel_no=${btoa(mobile.trim())}&email=${btoa(email.trim())}`;
+    const url = `https://partners.careinsurance.com/portals/asego/index.php?token=${PORTAL_TOKEN}&tel_no=${encrypt(mobile.trim())}&email=${encrypt(email.trim())}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setLoading(false);
     onClose();
