@@ -8,7 +8,7 @@ import CryptoJS from "crypto-js";
 
 const AES_KEY = CryptoJS.enc.Utf8.parse("z5yK1lw7XYt6YKdP7Pne2Jw3zRkMAziH");
 const AES_IV  = CryptoJS.enc.Utf8.parse("i0kbCAlFTlDXshYV");
-const PORTAL_TOKEN = "R1hna3hrSTFabVlRTnFqbEtpV0p6dz09Ojoh1aq0wOIgrqsvmk6D1SJA";
+const PORTAL_TOKEN = "aVVpWTN3U3c4cEV0N291S0dNOHpTZz09OjpZc7HVn73COqg8IrvrkXF6";
 
 function encrypt(value: string): string {
   const encrypted = CryptoJS.AES.encrypt(value, AES_KEY, { iv: AES_IV }).toString();
@@ -57,7 +57,7 @@ export default function InsuranceBookingModal({ isOpen, onClose }: Props) {
     e.preventDefault();
     if (!validate()) return;
     setLoading(true);
-    const url = `https://partners.careinsurance.com/portals/asego/index.php?token=${PORTAL_TOKEN}&tel_no=${encrypt(mobile.trim())}&email=${encrypt(email.trim())}`;
+    const url = `https://partners.careinsurance.com/portals/pai/index.php?token=${PORTAL_TOKEN}&tel_no=${encrypt(mobile.trim())}&email=${encrypt(email.trim())}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setLoading(false);
     onClose();
