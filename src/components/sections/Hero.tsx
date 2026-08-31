@@ -131,8 +131,8 @@ function EventBadge() {
           Sikkim Paragliding
           <br />
           Accuracy Cup
-          <span className="ml-1.5 text-pai-navy/50 group-hover:translate-x-0.5 inline-block transition-transform">
-            →
+          <span className="ml-1.5 text-pai-navy group-hover:translate-x-0.5 inline-block transition-transform text-lg sm:text-xl font-extrabold align-middle">
+            &rarr;
           </span>
         </span>
       </span>
