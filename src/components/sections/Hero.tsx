@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import { SIKKIM_EVENT, isSikkimEventLive } from "@/lib/events";
 
 const container = {
   hidden: {},
@@ -94,6 +95,51 @@ function TypewriterTagline({ reduced }: { reduced: boolean }) {
   );
 }
 
+function EventBadge() {
+  const [live, setLive] = useState(false);
+
+  useEffect(() => {
+    setLive(isSikkimEventLive());
+  }, []);
+
+  if (!live) return null;
+
+  return (
+    <motion.a
+      href={SIKKIM_EVENT.formUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+      className="group inline-flex items-center gap-3 bg-white/40 hover:bg-white/60 backdrop-blur-md rounded-2xl pr-4 pl-2 py-2 shadow-xl transition-colors pointer-events-auto"
+    >
+      <span className="relative h-16 sm:h-20 aspect-[197/146] rounded-xl overflow-hidden flex-shrink-0">
+        <Image
+          src={SIKKIM_EVENT.image}
+          alt=""
+          fill
+          className="object-contain"
+          sizes="110px"
+        />
+      </span>
+      <span className="text-left leading-tight">
+        <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider text-pai-red">
+          Registration Open
+        </span>
+        <span className="block text-sm sm:text-base font-semibold text-pai-navy">
+          Sikkim Paragliding
+          <br />
+          Accuracy Cup
+          <span className="ml-1.5 text-pai-navy/50 group-hover:translate-x-0.5 inline-block transition-transform">
+            →
+          </span>
+        </span>
+      </span>
+    </motion.a>
+  );
+}
+
 export default function Hero() {
   const reduced = useReducedMotion() ?? false;
   const child = reduced ? itemReduced : item;
@@ -115,6 +161,13 @@ export default function Hero() {
       {/* Subtle veil — keeps background visible but improves text contrast */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
+      {/* Event announcement — top-center, below the header */}
+      <div className="absolute inset-x-0 top-[84px] md:top-[104px] z-20 pointer-events-none">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-center">
+          <EventBadge />
+        </div>
+      </div>
+
       {/* Content */}
       <motion.div
         className="relative z-10 text-center text-white px-5 sm:px-6 max-w-4xl mx-auto pt-20 pb-16"
@@ -125,7 +178,7 @@ export default function Hero() {
         {/* Badge */}
         <motion.div
           variants={child}
-          className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-white mb-6 sm:mb-8"
+          className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/30 rounded-full px-4 py-1.5 text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-white mb-4"
         >
           Est. 2010 &nbsp;·&nbsp; Registered in Goa
         </motion.div>

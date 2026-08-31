@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import CookieBanner from "@/components/ui/CookieBanner";
+import EventAnnouncementModal from "@/components/ui/EventAnnouncementModal";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -81,6 +82,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <CookieBanner />
+        <EventAnnouncementModal />
       </body>
     </html>
   );
