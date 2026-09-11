@@ -1,15 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { Users, Shield, IdCard, CheckCircle, Download } from "lucide-react";
 import { insuranceTiers, insuranceFeatures } from "@/data/membership";
 import FadeUp from "@/components/ui/FadeUp";
-import InsuranceBookingModal from "@/components/ui/InsuranceBookingModal";
 
 export default function Membership() {
-  const [insuranceModalOpen, setInsuranceModalOpen] = useState(false);
   return (
-    <>
     <section id="membership" className="bg-surface py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="text-center mb-12">
@@ -180,12 +176,14 @@ export default function Membership() {
                 >
                   <Download className="w-4 h-4" /> Download Claim Form
                 </a>
-                <button
-                  onClick={() => setInsuranceModalOpen(true)}
+                <a
+                  href="https://portal.paraglidingassociationofindia.org/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full text-center text-sm font-semibold text-white bg-pai-navy hover:bg-pai-navy-dark rounded-lg py-2.5 transition-colors"
                 >
                   Book Now
-                </button>
+                </a>
               </div>
             </div>
           </FadeUp>
@@ -282,11 +280,5 @@ export default function Membership() {
         </div>
       </div>
     </section>
-
-    <InsuranceBookingModal
-      isOpen={insuranceModalOpen}
-      onClose={() => setInsuranceModalOpen(false)}
-    />
-    </>
   );
 }
